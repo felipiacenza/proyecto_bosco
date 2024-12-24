@@ -15,7 +15,7 @@ Proyecto Bosco es una plataforma web diseñada para centralizar la información 
 - Base de datos: MongoDB
 
 ## Installation
-```bash
+```
   git clone https://github.com/felipiacenza/proyecto_bosco
   cd proyecto-bosco
   npm install
@@ -24,7 +24,7 @@ Proyecto Bosco es una plataforma web diseñada para centralizar la información 
 
 ## License
 Proyecto Bosco © 2025 by Felipe Piacenza is licensed under CC BY-NC-ND 4.0.  
-For more details, see the [LICENSE](./LICENSE) file.
+For more details, see the [LICENSE](./LICENSE.md) file.
 
 ## Contributing
 Contributions are welcome! Please fork the repository, make your changes, and submit a pull request.  
