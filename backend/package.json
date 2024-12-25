@@ -1,14 +1,30 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/felipiacenza/proyecto_bosco.git"
+    "url": "git+https://github.com/felipiacenza/proyecto_bosco.git"
   },
-  "private": true
+  "private": true,
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/felipiacenza/proyecto_bosco/issues"
+  },
+  "homepage": "https://github.com/felipiacenza/proyecto_bosco#readme",
+  "description": "",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "pg": "^8.13.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
 }
