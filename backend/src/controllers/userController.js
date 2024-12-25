@@ -1,12 +1,11 @@
-// src/controllers/userController.js
-const db = require('../config/database');
+const userService = require('../services/userService');
 
 const getAllUsers = async (req, res) => {
     try {
-        const result = await db.query('SELECT * FROM users');
-        res.status(200).json(result.rows);
+        const users = await userService.getAllUsers();
+        res.status(200).json(users);
     } catch (error) {
-        console.error(error);
+        console.error(error.message);
         res.status(500).json({ error: 'Failed to fetch users' });
     }
 };
@@ -14,13 +13,10 @@ const getAllUsers = async (req, res) => {
 const createUser = async (req, res) => {
     const { name, email } = req.body;
     try {
-        const result = await db.query(
-            'INSERT INTO users (name, email) VALUES ($1, $2) RETURNING *',
-            [name, email]
-        );
-        res.status(201).json(result.rows[0]);
+        const user = await userService.createUser(name, email);
+        res.status(201).json(user);
     } catch (error) {
-        console.error(error);
+        console.error(error.message);
         res.status(500).json({ error: 'Failed to create user' });
     }
 };
